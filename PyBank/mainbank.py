@@ -23,10 +23,10 @@ with open(pybank_csv, newline="") as csvfile:
     revenue_change = []
 
     for x in range(1, len(P)):
-        revenue_change.append((int(P[x]) - int(P[x-1])))
+        revenue_change.append((int(P[x])-int(P[x-1])))
     
     # calculate average revenue change
-    revenue_average = sum(revenue_change) / len(revenue_change)
+    revenue_average = sum(revenue_change)/len(revenue_change)
     
     # calculate total length of months
     total_months = len(months)
@@ -39,7 +39,7 @@ with open(pybank_csv, newline="") as csvfile:
 
     # print the Results
     print("Financial Analysis")
-    print("....................................................................................")
+    print("...................................................................")
     print("total months: " + str(total_months))
     print("Total: " + "$" + str(sum(P)))
     print("Average change: " + "$" + str(revenue_average))
@@ -49,7 +49,7 @@ with open(pybank_csv, newline="") as csvfile:
     # output to a text file
     file = open("output.txt","w")
     file.write("Financial Analysis" + "\n")
-    file.write("...................................................................................." + "\n")
+    file.write(".............................................................." + "\n")
     file.write("total months: " + str(total_months) + "\n")
     file.write("Total: " + "$" + str(sum(P)) + "\n")
     file.write("Average change: " + "$" + str(revenue_average) + "\n")
